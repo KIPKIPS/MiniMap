@@ -470,6 +470,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4537078216137257410, guid: 54ba9643ee5e7a640904c56fa9365305, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fca18ba9ec2230f4ab9a36051bfb75db, type: 2}
     - target: {fileID: 4537078216137257437, guid: 54ba9643ee5e7a640904c56fa9365305, type: 3}
       propertyPath: m_Name
       value: Enemy3
@@ -1096,7 +1100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 916cfa16675f1994aa300d3c760cba40, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -1130,6 +1134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MapIcon
       objectReference: {fileID: 0}
+    - target: {fileID: 3255786091486137800, guid: eddd20b40ae7db74f8d3417f96470425, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f053e59ad9cc8cb47b8b77811464f6f8, type: 2}
     - target: {fileID: 5267471717475835026, guid: eddd20b40ae7db74f8d3417f96470425, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
