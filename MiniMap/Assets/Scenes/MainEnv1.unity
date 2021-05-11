@@ -415,7 +415,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4537078216137257437, guid: 54ba9643ee5e7a640904c56fa9365305, type: 3}
       propertyPath: m_Name
-      value: Enemy1
+      value: EnemyA1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54ba9643ee5e7a640904c56fa9365305, type: 3}
@@ -476,7 +476,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: fca18ba9ec2230f4ab9a36051bfb75db, type: 2}
     - target: {fileID: 4537078216137257437, guid: 54ba9643ee5e7a640904c56fa9365305, type: 3}
       propertyPath: m_Name
-      value: Enemy3
+      value: EnemyA3
       objectReference: {fileID: 0}
     - target: {fileID: 4537078216137257437, guid: 54ba9643ee5e7a640904c56fa9365305, type: 3}
       propertyPath: m_Layer
@@ -629,7 +629,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f053e59ad9cc8cb47b8b77811464f6f8, type: 2}
+  - {fileID: 2100000, guid: c0023f934ae0e0345bce83e7dd1ef546, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -825,7 +825,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4537078216137257437, guid: 54ba9643ee5e7a640904c56fa9365305, type: 3}
       propertyPath: m_Name
-      value: Enemy2
+      value: EnemyA2
       objectReference: {fileID: 0}
     - target: {fileID: 4537078216137257437, guid: 54ba9643ee5e7a640904c56fa9365305, type: 3}
       propertyPath: m_Layer
@@ -982,7 +982,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4537078216137257437, guid: 54ba9643ee5e7a640904c56fa9365305, type: 3}
       propertyPath: m_Name
-      value: Enemy4
+      value: EnemyA4
       objectReference: {fileID: 0}
     - target: {fileID: 4537078216137257437, guid: 54ba9643ee5e7a640904c56fa9365305, type: 3}
       propertyPath: m_Layer
@@ -1043,11 +1043,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4537078216137257437, guid: 54ba9643ee5e7a640904c56fa9365305, type: 3}
       propertyPath: m_Name
-      value: Enemy5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4537078216137257437, guid: 54ba9643ee5e7a640904c56fa9365305, type: 3}
-      propertyPath: m_Layer
-      value: 9
+      value: EnemyA5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54ba9643ee5e7a640904c56fa9365305, type: 3}
