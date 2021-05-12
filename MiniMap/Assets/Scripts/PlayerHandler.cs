@@ -14,5 +14,11 @@ public class PlayerHandler : MonoBehaviour {
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
         transform.Translate(new Vector3(h, 0, v) * speed * Time.deltaTime);
+        if (Input.GetKeyDown(KeyCode.P)) {
+            MiniMap.Instance.AddIocn(MiniMap.IconType.Player);
+        }
+        if (Input.GetKeyDown(KeyCode.E)) {
+            MiniMap.Instance.AddIocn(MiniMap.IconType.Enemy);
+        }
     }
 }
