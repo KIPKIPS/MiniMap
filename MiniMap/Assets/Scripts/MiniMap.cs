@@ -31,7 +31,7 @@ public class MiniMap : MonoBehaviour {
         Player,
         Enemy,
     }
-    public void AddIocn(IconType iconType) {
+    public GameObject AddIocn(IconType iconType) {
         GameObject icon = Instantiate(iconPrefab, miniMapTrs);
         icon.transform.localPosition = Vector3.zero;
         icon.transform.localScale = Vector3.one;
@@ -51,5 +51,6 @@ public class MiniMap : MonoBehaviour {
                 icon.GetComponent<Image>().sprite = playerIcon;
                 break;
         }
+        return icon;
     }
 }

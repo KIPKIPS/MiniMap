@@ -9,6 +9,10 @@ public class PlayerHandler : MonoBehaviour {
 
     }
 
+    void Awake() {
+        MiniMap.Instance.AddIocn(MiniMap.IconType.Player);
+    }
+
     // Update is called once per frame
     void Update() {
         float h = Input.GetAxis("Horizontal");
