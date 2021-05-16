@@ -20,7 +20,6 @@ public class EnemySpawn : MonoBehaviour {
             Instantiate(enemyPrefab, new Vector3(Random.Range(-5, 5), 1, Random.Range(-5, 5)), Quaternion.identity);
             enemyNum++;
             time = 0;
-            GameObject go = MiniMap.Instance.AddIocn(MiniMap.IconType.Enemy);
         }
     }
 }

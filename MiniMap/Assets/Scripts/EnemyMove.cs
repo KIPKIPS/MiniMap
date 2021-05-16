@@ -8,8 +8,16 @@ public class EnemyMove : MonoBehaviour {
     private float time = 2;
     private float x = 0;
     private float z = 0;
-    void Start() {
 
+
+    Vector2 pos = Vector2.zero;
+    private float iconX;
+    private float iconY;
+    private GameObject ememyIcon;
+    private RectTransform UiTrs;
+    void Start() {
+        ememyIcon = MiniMap.Instance.AddIocn(MiniMap.IconType.Enemy);
+        UiTrs = ememyIcon.GetComponent<RectTransform>();
     }
 
     // Update is called once per frame
@@ -21,5 +29,18 @@ public class EnemyMove : MonoBehaviour {
             z = Random.Range(-1f, 1f);
         }
         transform.Translate(new Vector3(x, 0, z) * speed * Time.deltaTime);
+        if (UiTrs != null) {
+            iconX = (transform.localPosition.x / 100) * 200 + 100;
+            iconY = (transform.localPosition.z / 100) * 200 - 100;
+            if (iconX >= 0 && iconX <= 200 && iconY >= -200 && iconY <= 0) {
+                ememyIcon.SetActive(true);
+                pos.x = iconX;
+                pos.y = iconY;
+                UiTrs.anchoredPosition = pos;
+            } else {
+                ememyIcon.SetActive(false);
+            }
+
+        }
     }
 }

@@ -5,12 +5,19 @@ using UnityEngine;
 public class PlayerHandler : MonoBehaviour {
     // Start is called before the first frame update
     public float speed = 4f;
-    void Start() {
+    private GameObject playerIcon;
+    private RectTransform UiTrs;
+    Vector2 pos = Vector2.zero;
+    private float x;
+    private float y;
 
+    void Start() {
+        playerIcon = MiniMap.Instance.AddIocn(MiniMap.IconType.Player);
+        UiTrs = playerIcon.GetComponent<RectTransform>();
     }
 
     void Awake() {
-        MiniMap.Instance.AddIocn(MiniMap.IconType.Player);
+
     }
 
     // Update is called once per frame
@@ -18,11 +25,24 @@ public class PlayerHandler : MonoBehaviour {
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
         transform.Translate(new Vector3(h, 0, v) * speed * Time.deltaTime);
-        if (Input.GetKeyDown(KeyCode.P)) {
-            MiniMap.Instance.AddIocn(MiniMap.IconType.Player);
+        if (UiTrs != null) {
+            x = (transform.localPosition.x / 100) * 200 + 100;
+            y = (transform.localPosition.z / 100) * 200 - 100;
+            if (x >= 0 && x <= 200 && y >= -200 && y <= 0) {
+                playerIcon.SetActive(true);
+                pos.x = x;
+                pos.y = y;
+                UiTrs.anchoredPosition = pos;
+            } else {
+                playerIcon.SetActive(false);
+            }
+
         }
-        if (Input.GetKeyDown(KeyCode.E)) {
-            MiniMap.Instance.AddIocn(MiniMap.IconType.Enemy);
-        }
+        // if (Input.GetKeyDown(KeyCode.P)) {
+        //     MiniMap.Instance.AddIocn(MiniMap.IconType.Player);
+        // }
+        // if (Input.GetKeyDown(KeyCode.E)) {
+        //     MiniMap.Instance.AddIocn(MiniMap.IconType.Enemy);
+        // }
     }
 }
